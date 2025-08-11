@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <script src="/wise_bot_widget_premium.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatWidget Test</title>
 </head>
 <body>
+    <h1>Test du ChatWidget</h1>
+    
+    <!-- 1. D'abord charger le script -->
+    <script src="./wise_bot_widget_premium.js"></script>
+    
+    <!-- 2. Ensuite l'initialiser -->
     <script>
-        // Initialize the chatbot widget
-        FloatingChatWidget.init({
-            apiUrl: 'https://primary-production-33255.up.railway.app/webhook/3b85a429-6ab2-42ec-a6be-98528860366b/chat',
-            sessionId: 'test-session-id' // Optional: Set a test session ID
+        // Attendre que le DOM soit chargé
+        document.addEventListener('DOMContentLoaded', function() {
+            FloatingChatWidget.init({
+                apiUrl: 'https://primary-production-33255.up.railway.app/webhook/3b85a429-6ab2-42ec-a6be-98528860366b/chat',
+                lang: 'fr',
+                theme: 'dark',
+                debug: true
+            });
         });
     </script>
 </body>
-
 </html>
-
